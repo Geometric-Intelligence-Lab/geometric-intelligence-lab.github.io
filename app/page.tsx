@@ -16,6 +16,12 @@ function Dot({ variant = "plain" }: { variant?: string }) {
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const goToSection = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    setOpen(false);
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   useEffect(() => {
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
     if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -29,7 +35,7 @@ export default function Home() {
     <header className="nav shell">
       <a href="#top" className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></a>
       <button onClick={() => setOpen(!open)} aria-expanded={open}>Menu</button>
-      <nav className={open ? "open" : ""}><a href="#research">Research</a><a href="#work">Work</a><a href="#people">People</a><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Contact</a></nav>
+      <nav className={open ? "open" : ""}><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Contact</a></nav>
     </header>
 
     <section className="hero shell" id="top">
