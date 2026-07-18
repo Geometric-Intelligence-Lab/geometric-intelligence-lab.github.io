@@ -46,7 +46,7 @@ export default function Home() {
     </section>
 
     <section className="objects shell" id="work">
-      <div className="section-head"><div><p className="label">Selected work</p><h2>Research objects</h2></div><p>Interactive 3D examples will live here.</p></div>
+      <div className="section-head"><div><p className="label">Selected work</p><h2>Research objects</h2></div></div>
       <div className="object-grid">
         {papers.map(([year,title,venue,caption,image,href])=><a href={href} target="_blank" rel="noreferrer" className="object-card" key={title}>
           <div className="object-view"><img src={image} alt={`Project image for ${title}`}/><span>3D</span></div>
