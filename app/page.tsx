@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-const topics = ["3D Generative AI", "Geometry Processing", "Computer Vision", "Geometric Learning", "Spatial Reasoning"];
+const topics = [
+  ["3D Generative AI", "cube"],
+  ["Geometry Processing", "mesh"],
+  ["Computer Vision", "vision"],
+  ["Geometric Learning", "nodes"],
+  ["Spatial Reasoning", "orbit"],
+];
 const papers = [
   ["2026", "Best Segmentation Buddies", "CVPR", "Image–shape correspondence without training or text labels.", "/research/bsb.png", "https://threedle.github.io/bsb/"],
   ["2025", "Geometry in Style", "CVPR", "3D stylization through surface-normal deformation.", "/research/geometry-in-style.png", "https://threedle.github.io/geometry-in-style/"],
@@ -42,13 +48,17 @@ export default function Home() {
       <div>
         <p className="label">Tel Aviv University</p>
         <div className="hero-name"><img src="/brand/gi-logo.png" alt="G"/><h1>eometric Intelligence <span>Lab</span></h1></div>
-        <p className="summary">We develop AI methods for understanding, generating, and manipulating 3D geometry.</p>
+        <p className="summary">We develop AI methods for <span>understanding, generating, and manipulating</span> 3D geometry.</p>
       </div>
     </section>
 
     <section className="topics shell" id="research">
       <p className="label">Research</p>
-      <div>{topics.map((topic, i)=><span key={topic}><b>{String(i+1).padStart(2,"0")}</b>{topic}</span>)}</div>
+      <div>{topics.map(([topic, icon], i)=><span className="topic-card" key={topic}>
+        <i className={`topic-icon topic-icon-${icon}`} aria-hidden="true"><b/><b/><b/></i>
+        <em>{String(i+1).padStart(2,"0")}</em>
+        <strong>{topic}</strong>
+      </span>)}</div>
     </section>
 
     <section className="objects shell" id="work">
