@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
+import GeometryPlayground from "./GeometryPlayground";
 
 const topics = [
   ["3D Generative AI", Box, "Models that create 3D assets from images, text, and sparse observations."],
@@ -55,6 +56,8 @@ export default function Home() {
         <span className="system-tag tag-a">VISION</span><span className="system-tag tag-b">GEOMETRY</span><span className="system-tag tag-c">GENERATIVE AI</span>
       </div>
     </section>
+
+    <GeometryPlayground/>
 
     <section className="topics shell" id="research">
       <div className="section-intro"><p className="label">Research areas</p><h2>Learning the language<br/>of <span>geometry.</span></h2></div>
