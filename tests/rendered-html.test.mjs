@@ -21,7 +21,7 @@ test("server-renders the Geometric Intelligence site", async () => {
   assert.match(html, /\/research\/geometry-in-style\.png/);
   assert.match(html, /3D Generative AI/);
   assert.match(html, /Itai Lang/);
-  assert.match(html, /Research objects/);
+  assert.match(html, /Recent/);
   assert.match(html, /Rotem Gatenyo/);
   assert.match(html, /\/brand\/gi-logo\.png/);
   assert.match(html, /\/people\/itai-lang\.png/);

@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
 
 const topics = [
-  ["3D Generative AI", "cube"],
-  ["Geometry Processing", "mesh"],
-  ["Computer Vision", "vision"],
-  ["Geometric Learning", "nodes"],
-  ["Spatial Reasoning", "orbit"],
+  ["3D Generative AI", Box, "Models that create 3D assets from images, text, and sparse observations."],
+  ["Geometry Processing", Shapes, "Learning to represent, analyze, and transform complex geometric structures."],
+  ["Computer Vision", ScanEye, "Recovering shape, pose, and scene structure from visual information."],
+  ["Geometric Learning", Network, "Neural methods for meshes, point clouds, graphs, and neural fields."],
+  ["Spatial Reasoning", Orbit, "AI systems that reason about shape, space, structure, and perception."],
 ];
 const papers = [
   ["2026", "Best Segmentation Buddies", "CVPR", "Image–shape correspondence without training or text labels.", "/research/bsb.png", "https://threedle.github.io/bsb/"],
@@ -15,10 +16,6 @@ const papers = [
   ["2025", "MeshUp", "3DV", "Controllable mesh deformation from multiple visual concepts.", "/research/meshup.png", "https://threedle.github.io/MeshUp/"],
   ["2024", "iSeg", "SIGGRAPH Asia", "Fine-grained 3D segmentation from a few user clicks.", "/research/iseg.png", "https://threedle.github.io/iSeg/"],
 ];
-
-function Dot({ variant = "plain" }: { variant?: string }) {
-  return <div className={`dot dot-${variant}`} aria-hidden="true"><i/><i/><i/></div>;
-}
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -45,41 +42,50 @@ export default function Home() {
     </header>
 
     <section className="hero shell" id="top">
-      <div>
+      <div className="hero-copy">
         <p className="label">Tel Aviv University</p>
         <div className="hero-name"><img src="/brand/gi-logo.png" alt="G"/><h1>eometric Intelligence <span>Lab</span></h1></div>
         <p className="summary">We develop AI methods for <span>understanding, generating, and manipulating</span> 3D geometry.</p>
+        <a className="hero-link" href="#research" onClick={(event) => goToSection(event, "research")}>Explore our research <ArrowUpRight size={15}/></a>
+      </div>
+      <div className="hero-system" aria-hidden="true">
+        <div className="system-ring ring-one"/><div className="system-ring ring-two"/>
+        <div className="system-core"><img src="/brand/gi-logo.png" alt=""/></div>
+        <i className="node node-a"/><i className="node node-b"/><i className="node node-c"/><i className="node node-d"/>
+        <span className="system-tag tag-a">VISION</span><span className="system-tag tag-b">GEOMETRY</span><span className="system-tag tag-c">GENERATIVE AI</span>
       </div>
     </section>
 
     <section className="topics shell" id="research">
-      <p className="label">Research</p>
-      <div>{topics.map(([topic, icon], i)=><span className="topic-card" key={topic}>
-        <i className={`topic-icon topic-icon-${icon}`} aria-hidden="true"><b/><b/><b/></i>
-        <em>{String(i+1).padStart(2,"0")}</em>
-        <strong>{topic}</strong>
-      </span>)}</div>
+      <div className="section-intro"><p className="label">Research areas</p><h2>Learning the language<br/>of <span>geometry.</span></h2></div>
+      <div className="topic-grid">{topics.map(([topic, Icon, description], i)=>{
+        const TopicIcon = Icon as typeof Box;
+        return <article className="topic-card" key={topic as string}>
+          <div className="topic-top"><span>{String(i+1).padStart(2,"0")}</span><TopicIcon size={25} strokeWidth={1.6}/></div>
+          <h3>{topic as string}</h3><p>{description as string}</p>
+        </article>;
+      })}</div>
     </section>
 
     <section className="objects shell" id="work">
-      <div className="section-head"><div><p className="label">Selected work</p><h2>Research objects</h2></div></div>
+      <div className="section-head"><div><p className="label">Selected work</p><h2>Recent <span>research.</span></h2></div><p>Methods for understanding and creating<br/>the three-dimensional world.</p></div>
       <div className="object-grid">
         {papers.map(([year,title,venue,caption,image,href])=><a href={href} target="_blank" rel="noreferrer" className="object-card" key={title}>
-          <div className="object-view"><img src={image} alt={`Project image for ${title}`}/><span>3D</span></div>
-          <div className="object-meta"><small>{year} · {venue}</small><h3>{title}</h3><p>{caption}</p><b>↗</b></div>
+          <div className="object-view"><img src={image} alt={`Project image for ${title}`}/><span>{venue}</span></div>
+          <div className="object-meta"><small>{year}</small><h3>{title}</h3><p>{caption}</p><b><ArrowUpRight size={17}/></b></div>
         </a>)}
       </div>
     </section>
 
     <section className="people shell" id="people">
-      <div className="section-head"><div><p className="label">People</p><h2>The lab</h2></div><p>People, each with their own point of view.</p></div>
+      <div className="section-head"><div><p className="label">People</p><h2>Meet the <span>lab.</span></h2></div></div>
       <div className="people-grid">
-        <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
-        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div><small>Researcher</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
-        <article className="person join"><div className="plus">+</div><div><small>Open positions</small><h3>Join the lab</h3><p>Students and collaborators are welcome.</p></div></article>
+        <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
+        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>Researcher</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
+        <article className="person join"><div className="join-icon"><GraduationCap size={30}/></div><div className="person-info"><small>Open positions</small><h3>Join the lab</h3><p>Students and collaborators are welcome.</p></div></article>
       </div>
     </section>
 
-    <footer className="shell"><div className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></div><p>School of Electrical & Computer Engineering<br/>Tel Aviv University</p><small>2026</small></footer>
+    <footer className="shell"><div className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></div><p><MapPin size={13}/> School of Electrical & Computer Engineering<br/>Tel Aviv University</p><small>© 2026</small></footer>
   </main>;
 }
