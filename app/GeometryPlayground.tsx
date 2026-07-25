@@ -62,12 +62,14 @@ export default function GeometryPlayground() {
       mesh.userData.spin = new THREE.Vector3(.002 + index * .0004, .004 + index * .0003, .0015);
       scene.add(mesh);
 
-      const edges = new THREE.LineSegments(
-        new THREE.EdgesGeometry(geometry, 25),
-        new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: .38 })
-      );
-      edges.scale.setScalar(1.004);
-      mesh.add(edges);
+      if (index !== 3) {
+        const edges = new THREE.LineSegments(
+          new THREE.EdgesGeometry(geometry, 25),
+          new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: .38 })
+        );
+        edges.scale.setScalar(1.004);
+        mesh.add(edges);
+      }
       return mesh;
     });
 
