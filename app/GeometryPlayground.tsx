@@ -51,7 +51,7 @@ export default function GeometryPlayground() {
         transmission: index === 3 ? .15 : 0,
       });
       const mesh = new THREE.Mesh(geometry, material);
-      mesh.scale.setScalar(.72);
+      mesh.scale.setScalar(.5);
       mesh.position.set(0, 0, starts[index][2]);
       mesh.rotation.set(index * .37, index * .21, index * .13);
       mesh.userData.velocity = new THREE.Vector3(
@@ -137,10 +137,10 @@ export default function GeometryPlayground() {
         if (mesh.position.y > halfHeight - .9 || mesh.position.y < -halfHeight + .9) velocity.y *= -1;
         velocity.multiplyScalar(.997);
         if (velocity.length() < .004) velocity.multiplyScalar(1.003);
-        const targetScale = hit === mesh ? .84 : .72;
+        const targetScale = hit === mesh ? .6 : .5;
         const pulse = mesh.userData.pulse ?? 0;
         mesh.userData.pulse = Math.max(0, pulse - .045);
-        const scale = targetScale + Math.sin(pulse * Math.PI) * .14;
+        const scale = targetScale + Math.sin(pulse * Math.PI) * .1;
         mesh.scale.lerp(new THREE.Vector3(scale, scale, scale), .1);
       });
       camera.position.x += (mouse.x * .22 - camera.position.x) * .018;

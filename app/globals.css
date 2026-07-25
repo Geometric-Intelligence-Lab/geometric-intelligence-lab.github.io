@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root{--bg:#fbfbfd;--ink:#111426;--muted:#626779;--line:#e5e7ef;--blue:#3c62f3;--violet:#8252e8;--pink:#d64ba8;--card:#fff}
+:root{--bg:#fffdf8;--ink:#111426;--muted:#626779;--line:#e8e5df;--blue:#3c62f3;--violet:#8252e8;--pink:#d64ba8;--card:#fffefb}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
@@ -39,9 +39,11 @@ a{color:inherit;text-decoration:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 main{position:relative;isolation:isolate}
 .geometry-playground{position:fixed;z-index:0;inset:0;pointer-events:none}
-.geometry-playground canvas{display:block;width:100vw;height:100vh;opacity:.78}
+.geometry-playground canvas{display:block;width:100vw;height:100vh;opacity:.58}
 .nav,.hero,.topics,.objects,.people,footer{position:relative;z-index:1}
-.topics,.objects,.people{background:rgba(251,251,253,.78);backdrop-filter:blur(2px)}
+.nav{background:rgba(255,253,248,.72);backdrop-filter:blur(4px)}
+.hero{background:rgba(255,253,248,.56);backdrop-filter:blur(1px)}
+.topics,.objects,.people{background:rgba(255,253,248,.84);backdrop-filter:blur(3px)}
 .topics,.objects,.people{padding:112px 0;border-bottom:1px solid var(--line)}
 .topics{display:block}
 .section-intro{margin-bottom:48px}
@@ -96,7 +98,7 @@ footer p svg{vertical-align:middle;margin-right:5px}
   .nav nav{display:none;position:absolute;top:60px;right:0;left:0;flex-direction:column;padding:10px;background:#fff}.nav nav.open{display:flex}
   .hero{min-height:680px;padding:65px 0 230px;align-items:start}.hero-name{margin-top:24px}.hero-name>img{width:60px;height:60px;margin-right:-10px}
   .hero-name h1{font-size:39px}.summary{font-size:15px}.hero-system{width:230px;left:50%;right:auto;transform:translateX(-50%);bottom:10px}
-  .geometry-playground canvas{opacity:.62}
+  .geometry-playground canvas{opacity:.46}
   .topics,.objects,.people{padding:78px 0}.topic-grid,.object-grid{grid-template-columns:1fr}.topic-card{min-height:180px}
   .section-head{display:block}.section-head>p{margin-top:18px}.section-intro h2,.section-head h2{font-size:43px}
   .object-view{height:245px}.person{align-items:flex-start;gap:18px;padding:19px}.person-photo{width:125px;height:155px}.person h3{font-size:22px}.profile-links{gap:5px}
