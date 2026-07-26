@@ -8,6 +8,10 @@ const out = path.join(root, "out");
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 await cp(path.join(root, "dist/client"), out, { recursive: true });
+await cp(
+  path.join(root, "google136550285820a757.html"),
+  path.join(out, "google136550285820a757.html"),
+);
 
 const workerUrl = pathToFileURL(path.join(root, "dist/server/index.js"));
 workerUrl.searchParams.set("static-export", Date.now().toString());
