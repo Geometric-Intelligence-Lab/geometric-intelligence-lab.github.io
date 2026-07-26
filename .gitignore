@@ -40,3 +40,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local editor and OpenAI hosting metadata
+/.idea/
+/.openai/
