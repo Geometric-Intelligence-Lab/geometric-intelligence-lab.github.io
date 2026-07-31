@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Geometric Intelligence Lab | Tel Aviv University",
   description: "Where geometry meets intelligence. Research in 3D generative AI, computer vision, geometric learning, and spatial reasoning.",
-  icons: { icon: "/gi-favicon-v2.png", shortcut: "/gi-favicon-v2.png", apple: "/gi-favicon-v2.png" },
+  icons: { icon: "/brand/gi-logo-v3-tight-safe.png", shortcut: "/brand/gi-logo-v3-tight-safe.png", apple: "/brand/gi-logo-v3-tight-safe.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

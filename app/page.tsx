@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
   return <main>
     <header className="nav shell">
-      <a href="#top" className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></a>
+      <a href="#top" className="wordmark"><img src="/brand/gi-logo-v3-tight-safe.png" alt=""/><span>Geometric Intelligence Lab</span></a>
       <button onClick={() => setOpen(!open)} aria-expanded={open}>Menu</button>
       <nav className={open ? "open" : ""}><a href="#news" onClick={(event) => goToSection(event, "news")}>News</a><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a></nav>
     </header>
@@ -45,13 +45,13 @@ export default function Home() {
     <section className="hero shell" id="top">
       <div className="hero-copy">
         <p className="label">Tel Aviv University</p>
-        <div className="hero-name"><img src="/brand/gi-logo.png" alt="G"/><h1>eometric Intelligence <span>Lab</span></h1></div>
+        <div className="hero-name"><h1><span className="hero-word"><img className="hero-letter hero-letter-g" src="/brand/gi-g-v3.png" alt="G"/>eometric</span><span className="hero-second-line"><span className="hero-word"><img className="hero-letter hero-letter-i" src="/brand/gi-i-v3.png" alt="I"/>ntelligence</span><b>Lab</b></span></h1></div>
         <p className="summary">We develop AI methods for <span>understanding, generating, and manipulating</span> 3D geometry.</p>
         <a className="hero-link" href="#research" onClick={(event) => goToSection(event, "research")}>Explore our research <ArrowUpRight size={15}/></a>
       </div>
       <div className="hero-system" aria-hidden="true">
         <div className="system-ring ring-one"/><div className="system-ring ring-two"/>
-        <div className="system-core"><img src="/brand/gi-logo.png" alt=""/></div>
+        <div className="system-core"><img src="/brand/gi-logo-v3-tight-safe.png" alt=""/></div>
         <i className="node node-a"/><i className="node node-b"/><i className="node node-c"/><i className="node node-d"/>
         <span className="system-tag tag-a">VISION</span><span className="system-tag tag-b">GEOMETRY</span><span className="system-tag tag-c">GENERATIVE AI</span>
       </div>
@@ -104,6 +104,6 @@ export default function Home() {
       </div>
     </section>
 
-    <footer className="shell"><div className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></div><p><MapPin size={13}/> School of Electrical & Computer Engineering<br/>Tel Aviv University</p><small>© 2026</small></footer>
+    <footer className="shell"><div className="wordmark"><img src="/brand/gi-logo-v3-tight-safe.png" alt=""/><span>Geometric Intelligence Lab</span></div><p><MapPin size={13}/> School of Electrical & Computer Engineering<br/>Tel Aviv University</p><small>© 2026</small></footer>
   </main>;
 }

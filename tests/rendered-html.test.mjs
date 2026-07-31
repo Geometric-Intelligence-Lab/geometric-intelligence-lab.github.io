@@ -23,7 +23,9 @@ test("server-renders the Geometric Intelligence site", async () => {
   assert.match(html, /Itai Lang/);
   assert.match(html, /Recent/);
   assert.match(html, /Rotem Gatenyo/);
-  assert.match(html, /\/brand\/gi-logo\.png/);
+  assert.match(html, /\/brand\/gi-logo-v3-tight-safe\.png/);
+  assert.match(html, /\/brand\/gi-g-v3\.png/);
+  assert.match(html, /\/brand\/gi-i-v3\.png/);
   assert.match(html, /\/people\/itai-lang\.png/);
   assert.match(html, /\/people\/rotem-gatenyo\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
