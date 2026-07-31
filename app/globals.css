@@ -23,7 +23,7 @@ a{color:inherit;text-decoration:none}
 .hero-word{display:inline-flex;align-items:flex-end;white-space:nowrap}
 .hero-letter{width:auto;height:1em;object-fit:contain;flex:none;margin-right:.055em}
 .hero-letter-g{transform:translate(.08em, -.05em)}
-.hero-letter-i {height: 1em;margin: 0 -.035em 0 0;transform: translate(.06em, -.05em);}
+.hero-letter-i {height: 1em;margin: 0 -.035em 0 0;transform: translate(.06em, -.06em);}
 .hero-second-line{display:flex;align-items:baseline;gap:.28em;margin:.48em 0 0 .75em}
 .hero-name h1 b{font-size:.24em;line-height:1;letter-spacing:.12em;text-transform:uppercase;color:#676c82}
 .summary{font-size:18px;line-height:1.65;max-width:560px;margin:0;color:var(--muted)}
