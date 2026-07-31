@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin, Globe2, SquareUserRound, BookOpen, Mail } from "lucide-react";
+import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin, Globe2, SquareUserRound, BookOpen, Mail, Sparkles, UserPlus } from "lucide-react";
 import GeometryPlayground from "./GeometryPlayground";
 
 const topics = [
@@ -39,7 +39,7 @@ export default function Home() {
     <header className="nav shell">
       <a href="#top" className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></a>
       <button onClick={() => setOpen(!open)} aria-expanded={open}>Menu</button>
-      <nav className={open ? "open" : ""}><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a><a href="#news" onClick={(event) => goToSection(event, "news")}>News</a></nav>
+      <nav className={open ? "open" : ""}><a href="#news" onClick={(event) => goToSection(event, "news")}>News</a><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a></nav>
     </header>
 
     <section className="hero shell" id="top">
@@ -59,8 +59,16 @@ export default function Home() {
 
     <GeometryPlayground/>
 
+    <section className="news shell" id="news">
+      <div className="simple-head"><h2>News</h2></div>
+      <div className="news-list">
+        <article><div className="news-icon"><Sparkles size={18}/></div><time>2026</time><div><h3>Geometric Intelligence Lab opens</h3><p>The lab is officially launched at Tel Aviv University.</p></div></article>
+        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><div><h3>Rotem begins her PhD</h3><p>Rotem Gatenyo joins the lab as its first PhD student.</p></div></article>
+      </div>
+    </section>
+
     <section className="topics shell" id="research">
-      <div className="section-intro"><p className="label">Research areas</p><h2>Learning the language<br/>of <span>geometry</span></h2></div>
+      <div className="simple-head"><h2>Research areas</h2></div>
       <div className="topic-grid">{topics.map(([topic, Icon, description], i)=>{
         const TopicIcon = Icon as typeof Box;
         return <article className="topic-card" key={topic as string}>
@@ -71,7 +79,7 @@ export default function Home() {
     </section>
 
     <section className="objects shell" id="work">
-      <div className="section-head"><div><p className="label">Selected work</p><h2>Recent <span>research</span></h2></div><p>Methods for understanding and creating<br/>the three-dimensional world.</p></div>
+      <div className="simple-head"><h2>Recent research</h2></div>
       <div className="object-grid">
         {papers.map(([year,title,venue,caption,image,href])=><a href={href} target="_blank" rel="noreferrer" className="object-card" key={title}>
           <div className="object-view"><img src={image} alt={`Project image for ${title}`}/><span>{venue}</span></div>
@@ -81,18 +89,10 @@ export default function Home() {
     </section>
 
     <section className="people shell" id="people">
-      <div className="section-head"><div><p className="label">People</p><h2>Meet the <span>lab</span></h2></div></div>
+      <div className="simple-head"><h2>People</h2></div>
       <div className="people-grid">
         <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
         <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
-      </div>
-    </section>
-
-    <section className="news shell" id="news">
-      <div className="section-head"><div><p className="label">News</p><h2>From the <span>lab</span></h2></div></div>
-      <div className="news-list">
-        <article><time>2026</time><h3>Geometric Intelligence Lab opens</h3><p>The lab is officially launched at Tel Aviv University.</p></article>
-        <article><time>2026</time><h3>Rotem begins her PhD</h3><p>Rotem Gatenyo joins the lab as its first PhD student.</p></article>
       </div>
     </section>
 
