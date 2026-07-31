@@ -91,7 +91,7 @@ export default function Home() {
     <section className="join-section shell">
       <div className="join-panel">
         <div className="join-icon"><GraduationCap size={30}/></div>
-        <div className="join-copy"><p className="label">Open positions</p><h2>Work with us</h2><p>If you are a motivated researcher who wants to work on cutting-edge AI for geometry processing, you are welcome to write to us.</p></div>
+        <div className="join-copy"><p className="label">Open positions</p><h2><span>Join</span> the lab</h2><p>We welcome motivated researchers interested in advancing cutting-edge AI for geometry processing. Get in touch to explore opportunities in the lab.</p></div>
         <a href="mailto:itailang@mail.tau.ac.il"><Mail size={15}/> Write to Itai</a>
       </div>
     </section>
