@@ -39,7 +39,7 @@ export default function Home() {
     <header className="nav shell">
       <a href="#top" className="wordmark"><img src="/brand/gi-logo.png" alt=""/><span>Geometric Intelligence Lab</span></a>
       <button onClick={() => setOpen(!open)} aria-expanded={open}>Menu</button>
-      <nav className={open ? "open" : ""}><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Contact</a></nav>
+      <nav className={open ? "open" : ""}><a href="#research" onClick={(event) => goToSection(event, "research")}>Research</a><a href="#work" onClick={(event) => goToSection(event, "work")}>Work</a><a href="#people" onClick={(event) => goToSection(event, "people")}>People</a><a href="#news" onClick={(event) => goToSection(event, "news")}>News</a></nav>
     </header>
 
     <section className="hero shell" id="top">
@@ -85,6 +85,14 @@ export default function Home() {
       <div className="people-grid">
         <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
         <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
+      </div>
+    </section>
+
+    <section className="news shell" id="news">
+      <div className="section-head"><div><p className="label">News</p><h2>From the <span>lab</span></h2></div></div>
+      <div className="news-list">
+        <article><time>2026</time><h3>Geometric Intelligence Lab opens</h3><p>The lab is officially launched at Tel Aviv University.</p></article>
+        <article><time>2026</time><h3>Rotem begins her PhD</h3><p>Rotem Gatenyo joins the lab as its first PhD student.</p></article>
       </div>
     </section>
 
