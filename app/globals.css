@@ -62,8 +62,7 @@ main{position:relative;isolation:isolate}
 .object-card{position:relative;background:#fff;border:1px solid #e1e3eb;border-radius:17px;padding:10px;overflow:hidden;box-shadow:0 6px 20px rgba(30,35,76,.055);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
 .object-card:hover{transform:translateY(-9px);border-color:#c9ccea;box-shadow:0 30px 70px rgba(47,43,112,.22)}
 .object-card:before{z-index:3}
-.object-view{height:220px;position:relative;border-radius:11px;display:grid;place-items:center;overflow:hidden;padding:14px;background:linear-gradient(145deg,#f4f5fa,#ececf6)}
-.object-view:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(60,74,154,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(60,74,154,.05) 1px,transparent 1px);background-size:28px 28px}
+.object-view{height:220px;position:relative;border-radius:11px;display:grid;place-items:center;overflow:hidden;padding:0;background:#fff}
 .object-view img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;transition:transform .4s ease}
 .object-card:hover .object-view img{transform:scale(1.035)}
 .object-view>span{position:absolute;z-index:2;right:13px;top:13px;background:rgba(255,255,255,.9);border:1px solid #dedfe9;border-radius:99px;padding:6px 9px;font-size:8px;font-weight:800;letter-spacing:.08em}
@@ -80,7 +79,7 @@ main{position:relative;isolation:isolate}
 .person h3{font-size:27px;letter-spacing:-.04em;margin:10px 0 21px}
 .person p{font-size:11px;color:#6e7282;line-height:1.5;margin:8px 0 0}
 .profile-links{display:flex;flex-wrap:wrap;gap:7px}
-.profile-links a{font-size:9px;font-weight:700;border:1px solid #dedfe8;border-radius:7px;padding:7px 9px;transition:.2s}
+.profile-links a{font-size:9px;font-weight:700;border:1px solid #dedfe8;border-radius:7px;padding:7px 9px;transition:.2s;display:inline-flex;align-items:center;gap:5px}
 .profile-links a:hover{background:#efefff;border-color:#c7c6ed;color:#4f4ec8}
 .person.join{background:linear-gradient(145deg,#f9f8ff,#efedff);min-height:190px}
 .join-icon{width:78px;height:78px;display:grid;place-items:center;border-radius:18px;background:#fff;color:#625bd6;border:1px solid #dfddef;box-shadow:0 10px 30px rgba(60,51,135,.12);flex:none}

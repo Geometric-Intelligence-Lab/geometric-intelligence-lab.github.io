@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
+import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin, Globe2, SquareUserRound, BookOpen } from "lucide-react";
 import GeometryPlayground from "./GeometryPlayground";
 
 const topics = [
@@ -60,7 +60,7 @@ export default function Home() {
     <GeometryPlayground/>
 
     <section className="topics shell" id="research">
-      <div className="section-intro"><p className="label">Research areas</p><h2>Learning the language<br/>of <span>geometry.</span></h2></div>
+      <div className="section-intro"><p className="label">Research areas</p><h2>Learning the language<br/>of <span>geometry</span></h2></div>
       <div className="topic-grid">{topics.map(([topic, Icon, description], i)=>{
         const TopicIcon = Icon as typeof Box;
         return <article className="topic-card" key={topic as string}>
@@ -71,7 +71,7 @@ export default function Home() {
     </section>
 
     <section className="objects shell" id="work">
-      <div className="section-head"><div><p className="label">Selected work</p><h2>Recent <span>research.</span></h2></div><p>Methods for understanding and creating<br/>the three-dimensional world.</p></div>
+      <div className="section-head"><div><p className="label">Selected work</p><h2>Recent <span>research</span></h2></div><p>Methods for understanding and creating<br/>the three-dimensional world.</p></div>
       <div className="object-grid">
         {papers.map(([year,title,venue,caption,image,href])=><a href={href} target="_blank" rel="noreferrer" className="object-card" key={title}>
           <div className="object-view"><img src={image} alt={`Project image for ${title}`}/><span>{venue}</span></div>
@@ -81,10 +81,10 @@ export default function Home() {
     </section>
 
     <section className="people shell" id="people">
-      <div className="section-head"><div><p className="label">People</p><h2>Meet the <span>lab.</span></h2></div></div>
+      <div className="section-head"><div><p className="label">People</p><h2>Meet the <span>lab</span></h2></div></div>
       <div className="people-grid">
-        <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
-        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer">Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a></div></div></article>
+        <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
+        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
         <article className="person join"><div className="join-icon"><GraduationCap size={30}/></div><div className="person-info"><small>Open positions</small><h3>Join the lab</h3><p>Students and collaborators are welcome.</p></div></article>
       </div>
     </section>
