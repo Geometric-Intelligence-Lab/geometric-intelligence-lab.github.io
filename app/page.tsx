@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin, Globe2, SquareUserRound, BookOpen } from "lucide-react";
+import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapPin, Globe2, SquareUserRound, BookOpen, Mail } from "lucide-react";
 import GeometryPlayground from "./GeometryPlayground";
 
 const topics = [
@@ -85,7 +85,14 @@ export default function Home() {
       <div className="people-grid">
         <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
         <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
-        <article className="person join"><div className="join-icon"><GraduationCap size={30}/></div><div className="person-info"><small>Open positions</small><h3>Join the lab</h3><p>Students and collaborators are welcome.</p></div></article>
+      </div>
+    </section>
+
+    <section className="join-section shell">
+      <div className="join-panel">
+        <div className="join-icon"><GraduationCap size={30}/></div>
+        <div className="join-copy"><p className="label">Open positions</p><h2>Work with us</h2><p>If you are a motivated researcher who wants to work on cutting-edge AI for geometry processing, you are welcome to write to us.</p></div>
+        <a href="mailto:itailang@mail.tau.ac.il"><Mail size={15}/> Write to Itai</a>
       </div>
     </section>
 
