@@ -62,8 +62,8 @@ export default function Home() {
     <section className="news shell" id="news">
       <div className="simple-head"><h2>News</h2></div>
       <div className="news-list">
-        <article><div className="news-icon"><Sparkles size={18}/></div><time>2026</time><div><h3>Geometric Intelligence Lab opens</h3><p>The lab is officially launched at Tel Aviv University.</p></div></article>
-        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><div><h3>Rotem begins her PhD</h3><p>Rotem Gatenyo joins the lab as its first PhD student.</p></div></article>
+        <article><div className="news-icon"><Sparkles size={18}/></div><time>2026</time><h3>Geometric Intelligence Lab opens at Tel Aviv University.</h3></article>
+        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><h3>Rotem Gatenyo joins the lab as a PhD student.</h3></article>
       </div>
     </section>
 
