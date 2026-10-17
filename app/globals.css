@@ -90,6 +90,7 @@ main{position:relative;isolation:isolate}
 .person{position:relative;min-height:255px;background:#fff;border:1px solid #e1e3eb;border-radius:17px;padding:25px;display:flex;align-items:center;gap:28px;overflow:visible;box-shadow:0 6px 20px rgba(30,35,76,.055);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
 .person:hover{transform:translateY(-9px) scale(1.025);border-color:#c9ccea;box-shadow:0 30px 65px rgba(47,43,112,.21)}
 .person-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center;border:1px solid #e0e1e9;box-shadow:0 10px 30px rgba(35,38,79,.14);transition:transform .32s ease,box-shadow .32s ease}
+.person-photo-amir{object-position:center 30%}
 .person:hover .person-photo{transform:translateY(-4px) scale(1.08);box-shadow:0 22px 45px rgba(47,43,112,.25)}
 .person-info{min-width:0}
 .person h3{font-size:27px;letter-spacing:-.04em;margin:10px 0 21px}

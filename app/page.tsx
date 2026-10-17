@@ -12,10 +12,10 @@ const topics = [
   ["Spatial Reasoning", Orbit, "AI systems that reason about shape, space, structure, and perception."],
 ];
 const papers = [
+  ["2026", "DynaMesh", "arXiv", "Dynamic textures that evolve while mesh geometry stays fixed.", "/research/dynamesh.jpg", "https://threedle.github.io/dynamesh/"],
   ["2026", "Best Segmentation Buddies", "CVPR", "Image–shape correspondence without training or text labels.", "/research/bsb.png", "https://threedle.github.io/bsb/"],
   ["2025", "Geometry in Style", "CVPR", "3D stylization through surface-normal deformation.", "/research/geometry-in-style.png", "https://threedle.github.io/geometry-in-style/"],
   ["2025", "MeshUp", "3DV", "Controllable mesh deformation from multiple visual concepts.", "/research/meshup.png", "https://threedle.github.io/MeshUp/"],
-  ["2024", "iSeg", "SIGGRAPH Asia", "Fine-grained 3D segmentation from a few user clicks.", "/research/iseg.png", "https://threedle.github.io/iSeg/"],
 ];
 
 export default function Home() {
@@ -63,7 +63,9 @@ export default function Home() {
       <div className="simple-head"><h2>Lab <span>News</span></h2></div>
       <div className="news-list">
         <article><div className="news-icon"><Sparkles size={18}/></div><time>2026</time><h3>Geometric Intelligence Lab opens at Tel Aviv University.</h3></article>
-        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><h3>Rotem Gatenyo joins the lab as a PhD student.</h3></article>
+        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><h3>Rotem Gatenyo joins the lab as a Ph.D. student.</h3></article>
+        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><h3>Amir Amber joins the lab as an M.Sc. student.</h3></article>
+        <article><div className="news-icon"><UserPlus size={18}/></div><time>2026</time><h3>Tal Berger joins the lab as an M.Sc. student.</h3></article>
       </div>
     </section>
 
@@ -92,7 +94,9 @@ export default function Home() {
       <div className="simple-head"><h2>Our <span>People</span></h2></div>
       <div className="people-grid">
         <article className="person"><img className="person-photo" src="/people/itai-lang.png" alt="Itai Lang"/><div className="person-info"><small>Principal Investigator</small><h3>Itai Lang</h3><div className="profile-links"><a href="https://itailang.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://il.linkedin.com/in/itailang" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?hl=en&user=q0bBhtsAAAAJ" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
-        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>PhD Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
+        <article className="person"><img className="person-photo" src="/people/rotem-gatenyo.png" alt="Rotem Gatenyo"/><div className="person-info"><small>Ph.D. Student</small><h3>Rotem Gatenyo</h3><div className="profile-links"><a href="https://rotemgat.github.io/" target="_blank" rel="noreferrer"><Globe2 size={12}/>Website</a><a href="https://www.linkedin.com/in/rotem-g8/" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a><a href="https://scholar.google.com/citations?user=MCSaL64AAAAJ&hl=en" target="_blank" rel="noreferrer"><BookOpen size={12}/>Scholar</a></div></div></article>
+        <article className="person"><img className="person-photo person-photo-amir" src="/people/amir-amber.webp" alt="Amir Amber"/><div className="person-info"><small>M.Sc. Student</small><h3>Amir Amber</h3><div className="profile-links"><a href="https://www.linkedin.com/in/amir-amber" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a></div></div></article>
+        <article className="person"><img className="person-photo" src="/people/tal-berger.webp" alt="Tal Berger"/><div className="person-info"><small>M.Sc. Student</small><h3>Tal Berger</h3><div className="profile-links"><a href="https://www.linkedin.com/in/talberger3" target="_blank" rel="noreferrer"><SquareUserRound size={12}/>LinkedIn</a></div></div></article>
       </div>
     </section>
 
