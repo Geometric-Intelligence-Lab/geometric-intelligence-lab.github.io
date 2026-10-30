@@ -5,11 +5,11 @@ import { Box, ScanEye, Network, Orbit, Shapes, ArrowUpRight, GraduationCap, MapP
 import GeometryPlayground from "./GeometryPlayground";
 
 const topics = [
-  ["3D Generative AI", Box, "Models that create 3D assets from images, text, and sparse observations."],
-  ["Geometry Processing", Shapes, "Learning to represent, analyze, and transform complex geometric structures."],
-  ["Computer Vision", ScanEye, "Recovering shape, pose, and scene structure from visual information."],
-  ["Geometric Learning", Network, "Neural methods for meshes, point clouds, graphs, and neural fields."],
-  ["Spatial Reasoning", Orbit, "AI systems that reason about shape, space, structure, and perception."],
+  ["4D Content Creation", Orbit, "Generating evolving 3D content."],
+  ["Physical AI", Network, "Modeling physical properties of 3D objects."],
+  ["AI-Based Simulation", Shapes, "Predicting the physical behavior of 3D scenes over time."],
+  ["3D Generation and Editing", Box, "Creating, texturing, and deforming 3D objects."],
+  ["3D Shape Understanding", ScanEye, "Segmenting, localizing, and matching parts of 3D shapes."],
 ];
 const papers = [
   ["2026", "DynaMesh", "arXiv", "Dynamic textures that evolve while mesh geometry stays fixed.", "/research/dynamesh.jpg", "https://threedle.github.io/dynamesh/"],

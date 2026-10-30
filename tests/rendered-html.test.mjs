@@ -20,7 +20,11 @@ test("server-renders the Geometric Intelligence site", async () => {
   assert.match(html, /\/research\/bsb\.png/);
   assert.match(html, /\/research\/geometry-in-style\.png/);
   assert.match(html, /\/research\/dynamesh\.jpg/);
-  assert.match(html, /3D Generative AI/);
+  assert.match(html, /4D Content Creation/);
+  assert.match(html, /Physical AI/);
+  assert.match(html, /AI-Based Simulation/);
+  assert.match(html, /3D Generation and Editing/);
+  assert.match(html, /3D Shape Understanding/);
   assert.match(html, /Itai Lang/);
   assert.match(html, /Recent/);
   assert.match(html, /Rotem Gatenyo/);
